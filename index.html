@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Psicóloga Dibella — Psicoterapia online para adultos</title>
 <meta name="description" content="Psicoterapia individual online para adultos. Un método estructurado, con objetivos claros y avances que podés ver. Lic. Ariana Dibella.">
-<link rel="canonical" href="https://psicologaarianadibella.com/">
+<link rel="canonical" href="https://psicologadibella.com.ar/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://psicologaarianadibella.com/">
+<meta property="og:url" content="https://psicologadibella.com.ar/">
 <meta property="og:title" content="Psicóloga Dibella — Psicoterapia online para adultos">
 <meta property="og:description" content="Psicoterapia individual online para adultos. Un método estructurado, con objetivos claros y avances que podés ver. Lic. Ariana Dibella.">
-<meta property="og:image" content="https://psicologaarianadibella.com/logoArianaDibella.png">
+<meta property="og:image" content="https://psicologadibella.com.ar/logoArianaDibella.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -683,13 +683,15 @@
       </div>
       <div id="formPanel">
         <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="a3ac1121-f587-471e-bfee-7975a2dc495f">
+          <input type="hidden" name="access_key" value="PEGÁ_ACÁ_TU_ACCESS_KEY">
           <input type="hidden" name="subject" value="Nueva consulta desde la web — Psicóloga Dibella">
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="name" required>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+          <label for="whatsapp">Número de WhatsApp <em style="font-style:italic; opacity:0.8; font-weight:400;">(revisá que esté bien escrito)</em></label>
+          <input type="tel" id="whatsapp" name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="Ej: 11 2345 6789" pattern="[0-9+\-\s()]{8,20}" title="Ingresá un número válido: solo números, podés incluir +, espacios o guiones" required>
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" name="edad" min="18" max="99" required>
           <label for="motivo">Contame brevemente qué te gustaría trabajar</label>
           <textarea id="motivo" name="message" required></textarea>
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Enviar</button>
