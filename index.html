@@ -66,6 +66,11 @@
     background:var(--violet);
     display:inline-block;
   }
+  .hero-modality{
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
   .wrap{
     max-width:var(--max);
     margin:0 auto;
@@ -168,10 +173,6 @@
     text-decoration:underline; text-underline-offset:3px;
     background:none; border:none; cursor:pointer; font-family:'Sora',sans-serif;
   }
-  .hero-tags{
-    margin-top:44px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
-  }
-  @media(min-width:900px){ .hero-tags{ justify-content:flex-start; } }
   .tag{
     font-family:'IBM Plex Mono', monospace; font-size:0.74rem;
     color:var(--ink-soft); background:var(--surface);
@@ -383,7 +384,7 @@
   .final-cta p{ color:#E4D9EF; max-width:44ch; margin:0 auto 32px; }
   .final-cta .btn-primary{ background:#fff; color:var(--violet); }
   .final-cta .btn-ghost{ border-color:rgba(255,255,255,0.5); color:#fff; }
-  .final-cta .hero-ctas{ }
+  .final-cta .hero-ctas{ align-items:center; }
 
   /* ---------- FORM (modal-ish inline panel) ---------- */
   #formPanel{
@@ -415,7 +416,10 @@
   .foot-brand span{ font-family:'Fraunces',serif; font-weight:600; }
   footer .cols{ display:flex; gap:60px; flex-wrap:wrap; }
   footer h4{ font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-faint); margin-bottom:12px; font-family:'IBM Plex Mono',monospace; font-weight:400;}
-  footer a, footer p{ font-size:0.9rem; color:var(--ink-soft); text-decoration:none; margin-bottom:8px; display:block;}
+  footer a{ font-size:0.9rem; color:var(--ink-soft); text-decoration:none; margin-bottom:10px; display:flex; align-items:center; gap:9px; transition:color .2s; }
+  footer a:hover{ color:var(--violet); }
+  footer a svg{ flex-shrink:0; }
+  footer p{ font-size:0.9rem; color:var(--ink-soft); margin-bottom:8px; }
   .ethics{
     margin-top:40px; padding-top:28px; border-top:1px solid var(--line);
     font-size:0.82rem; color:var(--ink-faint); max-width:70ch;
@@ -445,7 +449,7 @@
       <a href="#inversion">Inversión</a>
       <a href="#preguntas">Preguntas</a>
     </div>
-    <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20conocer%20más%20sobre%20las%20sesiones" class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20conocer%20más%20sobre%20las%20sesiones" class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener">Escribime por WhatsApp hoy</a>
   </nav>
 </header>
 
@@ -453,18 +457,14 @@
   <div class="wrap-wide hero-grid">
     <div class="hero-content">
       <p class="eyebrow">Psicoterapia online para adultos</p>
+      <p class="hero-modality">Modalidad virtual</p>
       <h1>Rendís bien puertas afuera. <em>Puertas adentro, no tanto.</em></h1>
       <p class="lead">Trabajamos ansiedad, ataques de pánico, estrés, crisis vitales, duelos y trauma de infancia con un método estructurado: objetivos claros desde el principio y avances que podés ver, no solo sentir.</p>
       <div class="hero-ctas">
         <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20conocer%20más%20sobre%20las%20sesiones" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-          Escribir por WhatsApp
+          Escribime por WhatsApp hoy
         </a>
-        <button class="hero-alt" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">¿Te cuesta dar el primer paso? Preferí el formulario</button>
-      </div>
-      <div class="hero-tags">
-        <span class="tag">Modalidad 100% online</span>
-        <span class="tag">Adultos 24–40+</span>
-        <span class="tag">Sesión semanal</span>
+        <button class="hero-alt" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">¿Te cuesta dar el primer paso? <strong style="color:var(--violet)">Preferí el formulario</strong></button>
       </div>
     </div>
     <div class="hero-media">
@@ -514,7 +514,7 @@
         <div class="step-dot"></div>
         <span class="tag-price">Entrevista de admisión — $10.000</span>
         <h3>Nos conocemos</h3>
-        <p>Un primer encuentro para que me cuentes tu motivo de consulta, te presente cómo trabajo y despejemos cualquier duda antes de empezar. Es un espacio pago porque implica un compromiso real de ambas partes, no solo una charla exploratoria.</p>
+        <p>Un primer encuentro para que me cuentes tu motivo de consulta, te presente cómo trabajo y despejemos cualquier duda antes de empezar. Es un espacio que implica un compromiso real de ambas partes, no solo una charla exploratoria.</p>
       </div>
 
       <div class="step">
@@ -526,7 +526,7 @@
       <div class="step">
         <div class="step-dot"></div>
         <h3>Las primeras sesiones, para conocerte en profundidad</h3>
-        <p>Durante las primeras seis sesiones nos dedicamos a entender tu historia, tu presente y tus proyectos a futuro — tu motivo de consulta ampliado, tus vínculos significativos, tus momentos clave. No es un trámite: es la base sobre la que se construye todo lo que sigue.</p>
+        <p>Durante las primeras sesiones nos dedicamos a entender tu historia, tu presente y tus proyectos a futuro — tu motivo de consulta ampliado, tus vínculos significativos, tus momentos clave. No es un trámite: es la base sobre la que se construye todo lo que sigue.</p>
       </div>
 
       <div class="step">
@@ -538,7 +538,13 @@
       <div class="step">
         <div class="step-dot"></div>
         <h3>Seguimiento y frecuencia</h3>
-        <p>Trabajamos con frecuencia semanal. La modalidad quincenal solo se habilita después de evaluar al menos seis sesiones, para asegurarnos de que el proceso pueda sostenerse bien con ese espaciado.</p>
+        <p>Trabajamos con frecuencia semanal. La modalidad quincenal se habilita una vez alcanzados los objetivos terapéuticos propuestos, con el propósito de fomentar tu autonomía por fuera del espacio de terapia.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <h3>Alta terapéutica</h3>
+        <p>Con esto alcanzado, se puede pensar un alta terapéutica.</p>
       </div>
     </div>
   </div>
@@ -625,11 +631,13 @@
         <span class="tag">Primer paso</span>
         <div class="amount">$10.000</div>
         <p>Entrevista de admisión. Conocernos, contarme tu motivo de consulta y despejar dudas sobre la modalidad.</p>
+        <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20agendar%20la%20entrevista%20de%20admisión" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:18px;" target="_blank" rel="noopener">Agendar</a>
       </div>
       <div class="price-card featured">
         <span class="tag">Proceso terapéutico</span>
         <div class="amount">$39.000 <span>/ sesión</span></div>
         <p>Sesión individual semanal de psicoterapia online. Frecuencia quincenal disponible tras evaluación de sostenibilidad.</p>
+        <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20agendar%20una%20sesión" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:18px;" target="_blank" rel="noopener">Agendar</a>
       </div>
     </div>
   </div>
@@ -670,7 +678,7 @@
       <h2>Demos el primer paso</h2>
       <p>Contame brevemente qué te trae por acá y coordinamos la entrevista de admisión.</p>
       <div class="hero-ctas">
-        <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20conocer%20más%20sobre%20las%20sesiones" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20conocer%20más%20sobre%20las%20sesiones" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Escribime por WhatsApp hoy</a>
         <button class="hero-alt" style="color:#E4D9EF" onclick="document.getElementById('formPanel').classList.toggle('show')">¿Te incomoda dar el primer paso? Completá el formulario y te contacto yo</button>
       </div>
       <div id="formPanel">
@@ -705,15 +713,18 @@
       <div class="cols">
         <div>
           <h4>Contacto</h4>
-          <a href="https://wa.me/5491132946835" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="mailto:lic.arianadibella@gmail.com">lic.arianadibella@gmail.com</a>
-          <a href="https://www.instagram.com/psicologadibella/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-        <div>
-          <h4>Atención</h4>
-          <p>Lunes a viernes</p>
-          <p>9 a 12 y 16 a 20 hs</p>
-          <p>Modalidad online</p>
+          <a href="https://wa.me/5491132946835" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.02 3a8.94 8.94 0 0 0-7.75 13.4L3 21l4.73-1.24a8.93 8.93 0 0 0 4.29 1.09h.01a8.94 8.94 0 0 0 8.93-8.94 8.87 8.87 0 0 0-2.36-5.59Zm-5.58 13.7h-.01a7.42 7.42 0 0 1-3.79-1.04l-.27-.16-2.81.74.75-2.74-.18-.28a7.43 7.43 0 0 1 11.6-9.21 7.36 7.36 0 0 1 2.19 5.24 7.43 7.43 0 0 1-7.48 7.45Zm4.08-5.56c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.06-.59.28-.2.22-.78.76-.78 1.85s.8 2.15.91 2.3c.11.15 1.57 2.4 3.81 3.36.53.23.95.37 1.27.47.53.17 1.02.15 1.4.09.43-.06 1.31-.53 1.5-1.05.19-.51.19-.95.13-1.05-.06-.09-.2-.15-.42-.26Z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:lic.arianadibella@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 6l10 7 10-7"></path></svg>
+            lic.arianadibella@gmail.com
+          </a>
+          <a href="https://www.instagram.com/psicologadibella/" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg>
+            Instagram
+          </a>
         </div>
       </div>
     </div>
